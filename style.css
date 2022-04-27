@@ -1,0 +1,108 @@
+/* line-height: 50px;
+  height: 40px;
+  text-align: center;
+  flex: 1;
+  padding: 15px 40px 15px 40px;
+  font-size: 18px;
+   */
+
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
+
+.header {
+  display: flex;
+  /* position: fixed;    блок не будет прокручиваться, а останется жёстко на месте*/
+  justify-content: space-between;
+  background: #eb5757;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  /* line-height: 1px; */
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  padding-left: 500px;
+}
+
+.items ul {
+  width: 450px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none; /* убирает точки списка ul */
+}
+a:hover {
+  background: rgb(48, 7, 7);
+  border-radius: 3px;
+}
+
+.items ul a {
+  text-decoration: none; /* убирает подчёркивание текста ссылки a */
+  color: #f9f9f9;
+  font-family: sen;
+}
+
+.header__shoppingCart {
+  background-color: #222222;
+  margin: 20px 20px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  position: relative; /*  чтобы потом можно было сделать adsolute у дочернего*/
+}
+
+.img {
+  width: 20px;
+  display: block;
+}
+
+.amount {
+  width: 18px;
+  height: 18px;
+  line-height: 20px;
+  border-radius: 50%;
+  background: white;
+  position: absolute; /* поверх родительского элемента размещаем где надо */
+  top: -8px;
+  right: -8px;
+  text-align: center;
+  font-size: 12px;
+  font-family: sen;
+  font-weight: 700; /* жирность шрифта */
+}
+
+.hidden-block {
+  width: 200px;
+  border: 3px solid rgb(218, 99, 86);
+  background: white;
+  position: absolute; /* поверх родительского элемента размещаем где надо */
+  top: 32px;
+  right: 15px;
+  /* opacity: 0;    - прозрачность здесь не надо, т.к. есть display: none; */
+  line-height: 2;
+  display: none;
+}
+
+.header__shoppingCart:hover .hidden-block {
+  /* opacity: 1; */
+  display: block;
+}
+
+.block-2 {
+  background: #222222;
+  border: 2px dashed;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  margin-top: 10px;
+}
+.block-3 {
+  background: #312361;
+  border: 5px solid;
+  color: rgb(191, 202, 28);
+  text-align: center;
+  line-height: 200px;
+  margin: 50px 500px;
+}

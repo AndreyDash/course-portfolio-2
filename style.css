@@ -1,10 +1,3 @@
-/* line-height: 50px;
-  height: 40px;
-  text-align: center;
-  flex: 1;
-  padding: 15px 40px 15px 40px;
-  font-size: 18px;
-   */
 
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
 
@@ -12,7 +5,7 @@
   display: flex;
   /* position: fixed;    блок не будет прокручиваться, а останется жёстко на месте*/
   justify-content: space-between;
-  background: #eb5757;
+  background: #f05454;
 }
 
 .header__logo {
@@ -60,7 +53,7 @@ a:hover {
 
 .amount {
   width: 18px;
-  height: 18px;
+  height: 19px;
   line-height: 20px;
   border-radius: 50%;
   background: white;
@@ -74,21 +67,25 @@ a:hover {
 }
 
 .hidden-block {
-  width: 200px;
+  width: 100px;
+  border-radius: 5%;
   border: 3px solid rgb(218, 99, 86);
   background: white;
   position: absolute; /* поверх родительского элемента размещаем где надо */
   top: 32px;
   right: 15px;
-  /* opacity: 0;    - прозрачность здесь не надо, т.к. есть display: none; */
-  line-height: 2;
-  display: none;
+  opacity: 0;   /*  - прозрачность или  display: none; */
+  line-height: 2;        /* а если opacity  то мышка срабатывает при наведении на hidden-block */
+  /* display: none;      - если этот способ, то не срабатывает transition  */
+  
 }
 
 .header__shoppingCart:hover .hidden-block {
-  /* opacity: 1; */
-  display: block;
-}
+  opacity: 1;
+  display: block; 
+  width: 200px;
+  transition: opacity 1s;
+  }
 
 .block-2 {
   background: #222222;

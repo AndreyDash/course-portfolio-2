@@ -3,6 +3,7 @@
 
 .header {
   display: flex;
+    margin: 0 auto;
   /* position: fixed;    блок не будет прокручиваться, а останется жёстко на месте*/
   justify-content: space-between;
   background: #f05454;
@@ -12,7 +13,6 @@
   display: flex;
   align-items: center;
   padding-left: 25px;
-  /* line-height: 1px; */
 }
 
 .header__menu {
@@ -71,24 +71,23 @@ a:hover {
   border-radius: 5%;
   border: 3px solid rgb(218, 99, 86);
   background: white;
-  position: absolute; /* поверх родительского элемента размещаем где надо */
+  position: absolute;   
   top: 32px;
   right: 15px;
-  opacity: 0;   /*  - прозрачность или  display: none; */
-  line-height: 2;        /* а если opacity  то мышка срабатывает при наведении на hidden-block */
-  /* display: none;      - если этот способ, то не срабатывает transition  */
-  
+  line-height: 2; 
+  /* opacity: 0;    */
+   /* display: none;      - если этот способ, то не срабатывает transition  */
+  pointer-events: none;    
 }
 
 .header__shoppingCart:hover .hidden-block {
-  opacity: 1;
+  /* opacity: 1; */
   display: block; 
-  width: 200px;
-  transition: opacity 1s;
-  }
+  /* transition: width 1s; */
+   }
 
-.block-2 {
-  background: #222222;
+        .block-2 {
+    background: #222222;
   border: 2px dashed;
   color: white;
   text-align: center;

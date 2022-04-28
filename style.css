@@ -69,25 +69,26 @@ a:hover {
 .hidden-block {
   width: 100px;
   border-radius: 5%;
-  border: 3px solid rgb(218, 99, 86);
-  background: white;
+  border: 3px solid rgb(52, 15, 214);
+  background: rgb(238, 241, 44);
   position: absolute;   
   top: 32px;
   right: 15px;
-  line-height: 2; 
-  /* opacity: 0;    */
-   /* display: none;      - если этот способ, то не срабатывает transition  */
+  opacity: 0;
+  line-height: 2;    
+  /* display: none;       - если этот способ, то не срабатывает transition  */ 
   pointer-events: none;    
 }
 
 .header__shoppingCart:hover .hidden-block {
-  /* opacity: 1; */
+  opacity: 1;
   display: block; 
-  /* transition: width 1s; */
+  width: 300px;
+  transition: width 1s, opacity 1.5s; 
    }
 
-        .block-2 {
-    background: #222222;
+ .block-2 {
+  background: #222222;
   border: 2px dashed;
   color: white;
   text-align: center;

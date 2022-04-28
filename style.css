@@ -18,7 +18,9 @@
 .header__menu {
   display: flex;
   align-items: center;
-  padding-left: 500px;
+   justify-content: end;
+  flex-grow: 1;
+
 }
 
 .items ul {
@@ -95,11 +97,4 @@ a:hover {
   line-height: 100px;
   margin-top: 10px;
 }
-.block-3 {
-  background: #312361;
-  border: 5px solid;
-  color: rgb(191, 202, 28);
-  text-align: center;
-  line-height: 200px;
-  margin: 50px 500px;
-}
+
